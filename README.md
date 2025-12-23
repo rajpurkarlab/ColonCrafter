@@ -1,7 +1,11 @@
-# ColonCrafter: A Depth Estimation Model for Colonoscopy Videos Using
-Diffusion Priors
+# ColonCrafter: A Depth Estimation Model for Colonoscopy Videos Using Diffusion Priors
 
-**[Paper](https://arxiv.org/abs/2509.13525)** | **[Model Weights](https://huggingface.co/romainhardy/coloncrafter)**
+<p align="center">
+  <a href="https://arxiv.org/abs/2509.13525"><b>Paper</b></a> |
+  <a href="https://huggingface.co/romainhardy/coloncrafter"><b>Model Weights</b></a>
+</p>
+
+This repository contains the official implementation for the paper "ColonCrafter: A Depth Estimation Model for Colonoscopy Videos Using Diffusion Priors".
 
 ## Installation
 
@@ -66,6 +70,7 @@ See `notebooks/` for complete examples.
 
 ## Citation
 
+If you use part of our work in your research, please cite it:
 ```bibtex
 @article{hardy2025coloncrafter,
   title={ColonCrafter: A Depth Estimation Model for Colonoscopy Videos Using Diffusion Priors},
