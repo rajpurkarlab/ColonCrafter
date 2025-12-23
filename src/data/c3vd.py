@@ -75,14 +75,14 @@ class C3VDDataset(Dataset):
 
     def _load_image(self, path: str) -> torch.Tensor:
         """Load and preprocess an RGB image."""
-        image = np.array(Image.open(path)) / 255.0
+        image = np.array(Image.open(path)).astype(np.float32) / 255.0
         if self.resize is not None:
             image = cv2.resize(image, self.resize, interpolation=cv2.INTER_LINEAR)
         return torch.from_numpy(image).permute(2, 0, 1)
 
     def _load_depth(self, path: str) -> torch.Tensor:
         """Load and preprocess a depth map."""
-        depth = np.array(Image.open(path))
+        depth = np.array(Image.open(path)).astype(np.float32)
         if self.resize is not None:
             depth = cv2.resize(depth, self.resize, interpolation=cv2.INTER_LINEAR)
         return torch.from_numpy(depth).float() / self.depth_scale
